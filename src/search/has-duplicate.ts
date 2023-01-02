@@ -34,4 +34,50 @@ function optimizedHasDuplicate(array: number[]): ReturnValue {
   return { result: false, steps };
 }
 
-export { nestedHasDuplicate, optimizedHasDuplicate };
+// exercise - greatest number - pg 61
+
+// rewrite the func so that it becomes O(N)
+
+function logGreatestNumber(array: number[]): number | undefined {
+  let isIValTheGreatest: boolean;
+
+  for (let i = 0; i < array.length; i++) {
+    isIValTheGreatest = true;
+    for (let j = 0; j < array.length; j++) {
+      if (array[i] < array[j]) {
+        isIValTheGreatest = false;
+      }
+    }
+    if (isIValTheGreatest) {
+      return array[i];
+    }
+  }
+}
+
+// My optimized version
+function linGreatestNumber(array: number[]): number | undefined {
+  let newlyPopulatedArray: number[] = [];
+  for (let i = 0; i < array.length; i++) {
+    newlyPopulatedArray[array[i]] = 1;
+  }
+  return newlyPopulatedArray.length - 1;
+}
+
+// optimized version from book, much simpler
+function exampleLinGreatestNumber(array: number[]): number {
+  let greatestNumberSoFar = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > greatestNumberSoFar) {
+      greatestNumberSoFar = array[i];
+    }
+  }
+  return greatestNumberSoFar;
+}
+
+export {
+  nestedHasDuplicate,
+  optimizedHasDuplicate,
+  logGreatestNumber,
+  linGreatestNumber,
+  exampleLinGreatestNumber,
+};

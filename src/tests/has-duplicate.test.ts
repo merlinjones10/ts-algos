@@ -1,6 +1,9 @@
 import {
   nestedHasDuplicate,
   optimizedHasDuplicate,
+  logGreatestNumber,
+  linGreatestNumber,
+  exampleLinGreatestNumber,
 } from '../search/has-duplicate';
 
 describe('should test duplicate search functions', () => {
@@ -20,5 +23,17 @@ describe('should test duplicate search functions', () => {
     const nested = nestedHasDuplicate(falsyArr);
 
     expect(optimized.steps).toBeLessThan(nested.steps);
+  });
+
+  test('should return the greatest number', () => {
+    let testArr: number[];
+    testArr = [6, 5, 9, 3, 2];
+    expect(logGreatestNumber(testArr)).toEqual(9);
+    expect(linGreatestNumber(testArr)).toEqual(9);
+    expect(exampleLinGreatestNumber(testArr)).toEqual(9);
+    testArr = [0, 5, 9, 3, 45];
+    expect(logGreatestNumber(testArr)).toEqual(45);
+    expect(linGreatestNumber(testArr)).toEqual(45);
+    expect(exampleLinGreatestNumber(testArr)).toEqual(45);
   });
 });

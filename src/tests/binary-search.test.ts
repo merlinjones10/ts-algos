@@ -1,4 +1,4 @@
-import { searchInsert, simpleSearch } from '../binary-search';
+import { simpleSearch } from '../binary-search';
 
 describe('binary search algos', () => {
   // simple search
@@ -23,22 +23,4 @@ describe('binary search algos', () => {
     output = null;
     expect(simpleSearch(nums, target)).toEqual(output);
   });
-
-  // leetcode q.
-  //   test('should return index of found element', () => {
-  //     let nums = [1, 3, 5, 6];
-  //     let target = 5;
-  //     let output = 2;
-  //     expect(searchInsert(nums, target)).toEqual(output);
-
-  //     nums = [1, 3, 5, 6];
-  //     target = 2;
-  //     output = 1;
-  //     expect(searchInsert(nums, target)).toEqual(output);
-
-  //     nums = [1, 3, 5, 6];
-  //     target = 7;
-  //     output = 4;
-  //     expect(searchInsert(nums, target)).toEqual(output);
-  //   });
 });

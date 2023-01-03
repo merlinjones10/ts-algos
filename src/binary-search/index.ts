@@ -6,7 +6,7 @@
 note that in this example, the boundary values are included  
 */
 
-function simpleSearch(intArray: number[], target: number): number | null {
+function simpleSearch(intArray: NumArr, target: number): number | null {
   let myArray = intArray;
   let middleP: number;
 

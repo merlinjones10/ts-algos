@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-function mySelSort(array: number[]): NumArr {
+function mySelSort(array: NumArr): NumArr {
   let sortedArr = array;
 
   for (let i = 0; i < array.length - 1; i++) {

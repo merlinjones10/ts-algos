@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+// Swapping values if they are larger
 
 function mySelSort(array: NumArr): NumArr {
   let sortedArr = array;

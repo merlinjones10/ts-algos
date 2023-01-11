@@ -54,7 +54,7 @@ function logGreatestNumber(array: NumArr): number | undefined {
   }
 }
 
-// My optimized version
+// My optimized version.
 function linGreatestNumber(array: NumArr): number | undefined {
   let newlyPopulatedArray: number[] = [];
   for (let i = 0; i < array.length; i++) {
